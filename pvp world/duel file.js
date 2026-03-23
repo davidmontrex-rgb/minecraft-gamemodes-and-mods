@@ -33,7 +33,7 @@ let spawnpointArea = [
 ]
 
 let mapArea = [
-    world(-17, 2, 37),
+    world(-17, 0, 37),
     world(19, 15, 1)
 ]
 
@@ -205,14 +205,17 @@ let deadplayers = 0
 
 function game() {
     timer(5, "Starting in: ")
+    destroyMap()
+    destroyDeathArea()
     setup()
     timer(5, "Releasing in: ")
     player.say("§6 §l Game Started!")
     startMatch()
-    while (pausevar == false && (getPlayerList().length - deadplayers) > 1 ) {
+    while (pausevar == false /*&& (getPlayerList().length - deadplayers) > 1*/ ) {
         loops.pause(100)
         //player.say(getPlayerList().length - deadplayers)
     }
+    loops.pause(1000)
     endMatch()
     player.say("§6 §l Game Ended!")
 }
