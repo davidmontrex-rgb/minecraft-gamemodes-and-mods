@@ -208,16 +208,16 @@ function game() {
     destroyMap()
     destroyDeathArea()
     setup()
-    timer(5, "Releasing in: ")
+    timer(15, "Releasing in: ")
     player.say("§6 §l Game Started!")
     startMatch()
     while (pausevar == false /*&& (getPlayerList().length - deadplayers) > 1*/ ) {
         loops.pause(100)
         //player.say(getPlayerList().length - deadplayers)
     }
-    loops.pause(1000)
-    endMatch()
     player.say("§6 §l Game Ended!")
+    loops.pause(5000)
+    endMatch()
 }
 
 player.onChat("start", function () {
