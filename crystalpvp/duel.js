@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////
 
 let layers = [
+    [-1, 10, AIR],
     [-1,-1, GRASS],
     [-2, -5, DIRT],
     [-5, -63, STONE],
@@ -186,7 +187,6 @@ function releasePlayers(){
 let playerList = [
     "DavidM",
     "Aaron",
-  // add players here
 ]
 
 player.onChat("rad", function(num1) {
@@ -220,7 +220,7 @@ player.onChat("remove", function () {
 player.onChat("cmd", function (num1) {
     player.say("§6 §l >> Current Commands:")
     player.say("§6 - remove")
-    player.say("§6 - setup")
+    player.say("§6 - start")
     player.say("§6 - reset")
     player.say("§6 - rad [NUMBER 1-21]")
 })
